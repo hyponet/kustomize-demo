@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dao-2048
+spec:
+  strategy: {}
+  template:
+    spec:
+      containers:
+      - name: dao-2048
+        resources:
+            limits:
+              cpu: 100m
+              memory: 100Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi

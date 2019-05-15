@@ -1,0 +1,9 @@
+bases:
+- ../../base
+patchesStrategicMerge:
+- nodeport_patch.yaml
+- env_patch.yaml
+- resource_patch.yaml
+resources:
+- config.yaml
+namespace: 2048-prod

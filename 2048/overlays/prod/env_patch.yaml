@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dao-2048
+spec:
+  strategy: {}
+  template:
+    spec:
+      containers:
+      - name: dao-2048
+        env:
+          - name: PROD
+            value: "1"
+          - name: SOMECONFIG
+            valueFrom:
+              configMapKeyRef:
+                name: pord
+                key: prodconfig
